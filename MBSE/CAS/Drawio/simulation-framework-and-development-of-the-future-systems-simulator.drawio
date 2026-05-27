@@ -231,8 +231,22 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="kXyiYRmhs7nIc4JyoIIu-1" value="MAIN PROGRAM&lt;br&gt;Logical Control of Simulation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="kXyiYRmhs7nIc4JyoIIu-1" value="MAIN PROGRAM&lt;br&gt;Logical Control of Simulation" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="43PrIOygkLGhgvhoc58_-1" value="INITIALIZE&lt;br&gt;Set IC&#39;s, parameters, TMAX, etc." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="43PrIOygkLGhgvhoc58_-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kXyiYRmhs7nIc4JyoIIu-1" target="43PrIOygkLGhgvhoc58_-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="280" as="sourcePoint" />
+            <mxPoint x="440" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="43PrIOygkLGhgvhoc58_-5" value="Initialize" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="43PrIOygkLGhgvhoc58_-3">
+          <mxGeometry x="-0.02" y="-3" relative="1" as="geometry">
+            <mxPoint x="-5" y="-18" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
