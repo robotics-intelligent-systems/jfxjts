@@ -12,6 +12,18 @@ training and mission simulation using **MBSE, flight dynamics,
 Modelica/FMI, HLA/distributed simulation, ROS 2/DDS, AI, digital twins,
 synthetic environments, and modular mission interfaces**.
 
+## Current delivery status
+
+The first [instructor-led scenario and replay contract](docs/training/civil-navigation-interruption.md)
+is now delivered: a versioned manifest, synthetic event fixture, offline checker
+and 13 passing contract tests. This is an executable **contract harness**, with
+no aircraft dynamics, simulator connection or validated flight-training result.
+
+- [Scenario and instructor controls](docs/training/civil-navigation-interruption.md)
+- [Validation evidence](docs/training/validation-2026-10-10.md)
+- **Next task:** a local flight-dynamics adapter for one qualified civilian
+  aircraft/model, with pinned provenance, frame/unit checks and recorded replay.
+
 ## Vision
 
 **MBSE + Flight Simulation + Modelica/FMI + Distributed Simulation +
@@ -37,7 +49,7 @@ technology independence.
 
 ## Reference Architecture
 
-**Status:** this repository defines an integration architecture. The adapters,
+**Status:** this repository defines an integration architecture and a bounded\nsynthetic instructor/replay contract harness. The flight-model adapters,
 execution profiles, schemas, and validation gates below are proposed work,
 not a claim that the listed products already interoperate in jfxjts.
 Source descriptions were reviewed on 2026-09-20; every implementation must
@@ -689,6 +701,9 @@ required/optional status, and validation status.
 
 ### Phase 3 --- Mission Training Twin
 
+-   [x] Draft one civilian virtual training scenario with instructor controls and synthetic replay checks ([delivery](docs/training/civil-navigation-interruption.md)).
+-   [ ] Connect that scenario to a qualified aircraft model and validate recorded replay.
+
 -   [ ] Scenario schema.
 -   [ ] Mission interface.
 -   [ ] Instructor API.
@@ -820,3 +835,4 @@ Models**
 > Simulate before operation.\
 > Validate before deployment.\
 > Keep every simulation component replaceable.
+

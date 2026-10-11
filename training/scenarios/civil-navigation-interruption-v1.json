@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "civil-navigation-interruption",
+  "revision": "1",
+  "seed": 2035,
+  "execution_profile": "synthetic-contract",
+  "dynamics_owner": "scripted-source",
+  "frame": "ENU",
+  "units": "SI",
+  "tick_s": 1,
+  "initial_state": {"sim_time_s": 0, "visibility": "baseline"},
+  "allowed_cues": ["navigation-display-unavailable"],
+  "required_acknowledgements": ["navigation-display-unavailable"],
+  "expected_actions": ["ready", "start", "step", "pause", "inject_cue", "resume", "acknowledge", "step", "stop"]
+}
