@@ -679,6 +679,31 @@ Three categories are maintained:
 Each integration should document version, purpose, interface, license,
 required/optional status, and validation status.
 
+### Internal project dependencies
+
+jfxjts depends on the following Robotics Intelligent Systems projects at
+the engineering and reference-architecture level. Runtime dependencies are
+selected per executable scenario; this declaration does not imply that
+cross-project adapters are already implemented or tested.
+
+| Project dependency | Contribution to jfxjts | Proposed integration boundary |
+| --- | --- | --- |
+| [jfxai4dia](https://github.com/robotics-intelligent-systems/jfxai4dia) | AI-assisted industrial design, aircraft concepts, CAD/CAS and requirements traceability | Versioned aircraft geometry, mass properties, configuration and model provenance for the aircraft registry |
+| [jfxrtess](https://github.com/robotics-intelligent-systems/jfxrtess) | Real-time embedded systems, rapid control prototyping and MIL/SIL/HIL/CHIL verification | Avionics, controller and cockpit adapters with declared timing, control ownership and telemetry contracts |
+| [jfxnpss](https://github.com/robotics-intelligent-systems/jfxnpss) | Numerical propulsion, multidomain models and propulsion digital twins | Propulsion, energy and health interfaces; Modelica/FMI coupling where a qualified model is available |
+| [jfxai4mjas](https://github.com/robotics-intelligent-systems/jfxai4mjas) | Modular aircraft systems, MBSE, aircraft simulation and OpenTwin Air | Aircraft/subsystem configuration, flight-model candidates and versioned aircraft twin interfaces |
+| [jfxmbdss](https://github.com/robotics-intelligent-systems/jfxmbdss) | Maritime simulation, maritime digital twins and distributed scenarios | Ship/carrier and maritime-environment state, deck transforms and qualified federation gateways |
+
+The maritime dependency requested as **jfxmbds** is registered using the
+existing repository's canonical name, **jfxmbdss**.
+
+**Integration status:** all five dependencies are declared at the architecture
+level; adapter implementation, integration tests and use-case validation remain
+pending. Before enabling a dependency in an executable profile, record its
+selected commit/tag, code and asset licenses, interface/schema versions,
+runtime requirements and validation evidence. A project-level declaration
+does not automatically install or execute its technology compendium.
+
 ## Roadmap
 
 ### Phase 1 --- Documentation and Architecture
